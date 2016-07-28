@@ -1,0 +1,84 @@
+$blue: #0039e6;
+$yellow: #ffcc00;
+$gray: #aaa;
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  background-image: url("http://media.tumblr.com/3dbd5685ac43abe11651330770539aec/tumblr_inline_mwu1dv3Xaf1s86a45.jpg");
+  background-size: 1000px 560px;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.menu {
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: $blue;
+  border: 5px solid black;
+  border-radius: 5px;
+  button {
+    margin-top: 20px;
+    height: 50px;
+    width: 120px;
+    font-size: 40px;
+    color: white;
+    background: #0040ff;
+    border: 2px solid #1a53ff;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      background: $blue;
+    }
+  }
+}
+.board-container {
+  width: 720px;
+  height: 480px;
+  border: 5px solid black;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 5px;
+  background: $blue;
+}
+.category-container {
+  float: left;
+  width: 120px;
+  height: 100%;
+  margin: 0;
+}
+.category-title {
+  width: 116px;
+  height: 76px;
+  border: 2px solid $gray;
+  text-align: center;
+  p {
+    color: white;
+    font-size: 20px;
+  }
+}
+.question-container {
+  width: 116px;
+  height: 76px;
+  border: 2px solid $gray;
+  text-align: center;
+  p {
+    color: $yellow;
+    font-size: 25px;
+  }
+}
+
+
+// a Modal should have full width and height, opaque background
+// content in middle is not opaque
+// fixed position should allow modal to appear in front without shifting other content
