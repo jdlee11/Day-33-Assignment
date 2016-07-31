@@ -14,3 +14,4 @@ let router = (
 
 ReactDOM.render(router,
   document.getElementById('container'));
+hashHistory.push('board');
