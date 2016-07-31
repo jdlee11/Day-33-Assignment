@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
-import MenuPage from './components/pages/menupage';
 import BoardPage from './components/pages/boardpage';
+import QuestionModal from './components/questionmodal';
 
 let router = (
   <Router history={hashHistory}>
-    <Route path="/" component={MenuPage}/>
-    <Route path="/board" component={BoardPage}/>
+    <Route path="/board" component={BoardPage}>
+      <Route path=":id" component={QuestionModal}/>
+    </Route>
   </Router>
 );
 

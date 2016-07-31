@@ -12,42 +12,17 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
 }
-.container {
+#container {
   position: relative;
   width: 100%;
   height: 100%;
-}
-.menu {
-  width: 200px;
-  height: 100px;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 50px;
-  background: $blue;
-  border: 5px solid black;
-  border-radius: 5px;
-  button {
-    margin-top: 20px;
-    height: 50px;
-    width: 120px;
-    font-size: 40px;
-    color: white;
-    background: #0040ff;
-    border: 2px solid #1a53ff;
-    &:focus {
-      outline: none;
-    }
-    &:active {
-      background: $blue;
-    }
-  }
 }
 .board-container {
   width: 720px;
   height: 480px;
   border: 5px solid black;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 20px;
   border-radius: 5px;
   background: $blue;
 }
@@ -62,9 +37,12 @@ body {
   height: 76px;
   border: 2px solid $gray;
   text-align: center;
+  display: table;
   p {
     color: white;
     font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
   }
 }
 .question-container {
@@ -77,8 +55,52 @@ body {
     font-size: 25px;
   }
 }
+.entire-modal {
+  position: absolute;
+  text-align: center;
+  width: 720px;
+  height: 480px;
+  background: rgba(0, 0, 0, 0.5);
+}
+.q-modal {
+  position: absolute;
+  width: 500px;
+  height: 350px;
+  top: 60px;
+  left: 50%;
+  margin-left: -250px;
+  background: $blue;
+  border: 5px solid black;
+  border-radius: 5px;
+  p {
+    padding-top: 40px;
+    margin: 0;
+    font-size: 30px;
+    color: white;
+  }
+  input {
+    position: absolute;
+    bottom: 30px;
+    height: 40px;
+    width: 350px;
+    left: 50%;
+    margin-left: -175px;
+    font-size: 35px;
+  }
+}
+.earnings {
+  font-size: 30px;
+  margin: 15px;
+  text-align: center;
+  line-height: 175%;
+}
 
 
-// a Modal should have full width and height, opaque background
-// content in middle is not opaque
-// fixed position should allow modal to appear in front without shifting other content
+
+
+
+
+
+
+
+// *********************************
